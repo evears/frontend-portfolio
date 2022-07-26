@@ -1,1 +1,234 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  background-image: url("https://i.pinimg.com/originals/3e/84/40/3e8440ffc2784d7a57b34614a4c90707.jpg");
+  background-size: cover;
+  background-repeat: false;
+  font-family: "Ubuntu Mono", monospace;
+  /* display: flex;
+  align-items: center;
+  text-align: center; */
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+.navegator {
+  background-color: #deaec3;
+  border-radius: 15px 15px 15px 15px;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 3px dashed #354f5f;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+footer {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.titulo {
+  color: #354f5f;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-item.btn {
+  background-color: #c25a81;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-item {
+  margin: 15px;
+  font-size: 30px;
+}
+
+.enlace {
+  text-decoration: none;
+  color: #354f5f;
+}
+
+.btn:hover {
+  background-color: #c48ca4;
+}
+
+.tarjeta {
+  margin: 20px;
+  border: 2px dashed #354f5f;
+  background-color: #f3dde6;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.titulo-card {
+  margin: 10px;
+}
+
+.fotoperfil {
+  margin: 20px;
+  border: 5px solid #c25a81;
+}
+
+h5,
+h4,
+h3,
+h6,
+p {
+  margin: 20px;
+}
+
+.imagenes {
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*= Skills */
+
+.skillbar-wrapper {
+  margin: 1.5em auto;
+  max-width: 960px;
+}
+
+.skillbar {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #eee;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin: 0;
+}
+
+.skillbar-title span {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+  height: 35px;
+  width: 0%;
+  border-radius: 3px;
+  transition: 500ms linear;
+  transition-property: width, background-color;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 15px;
+  height: 35px;
+  line-height: 35px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: color 500ms ease-out;
+}
+
+.complete .skill-bar-percent {
+  color: #354f5f;
+}
+
+.html5 .skillbar-title {
+  background: #c25a81;
+}
+
+.html5 .skillbar-bar {
+  background: #c48ca4;
+}
+
+.css .skillbar-title {
+  background: #c25a81;
+}
+
+.css .skillbar-bar {
+  background: #c48ca4;
+}
+
+.javascript .skillbar-title {
+  background: #c25a81;
+}
+
+.javascript .skillbar-bar {
+  background: #c48ca4;
+}
+
+.java .skillbar-title {
+  background: #c25a81;
+}
+
+.java .skillbar-bar {
+  background: #c48ca4;
+}
+
+.spring .skillbar-title {
+  background: #c25a81;
+}
+
+.spring .skillbar-bar {
+  background: #c48ca4;
+}
+
+.mysql .skillbar-title {
+  background: #d59769;
+}
+
+.mysql .skillbar-bar {
+  background: #edcc8d;
+}
+
+.ingles .skillbar-title {
+  background: #62a8c5;
+}
+
+.ingles .skillbar-bar {
+  background: #83bbe7;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.form-signin {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}

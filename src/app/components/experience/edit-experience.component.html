@@ -1,0 +1,38 @@
+<div class="container" *ngIf="expe">
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+        <div class="form-group">
+          <label for="puesto">Nombre del puesto laboral</label>
+          <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="expe.puesto" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Nombre de la empresa</label>
+          <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="expe.empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="descripcionexpe">Descripcion de la tarea</label>
+          <input type="text" class="form-control" id="descripcionexpe" name="descripcionexpe"
+            [(ngModel)]="expe.descripcionexpe" required>
+        </div>
+        <div class="form-group">
+          <label for="urlfotoempresa">Agregar la URL del logo de la empresa</label>
+          <input type="text" class="form-control" id="urlfotoempresa" name="urlfotoempresa"
+            [(ngModel)]="expe.urlfotoempresa" required>
+        </div>
+        <div class="form-group">
+          <label for="aniodesde">Año de inicio</label>
+          <input type="text" class="form-control" id="aniodesde" name="aniodesde" [(ngModel)]="expe.aniodesde" required>
+        </div>
+        <div class="form-group">
+          <label for="aniohasta">Año de finalización</label>
+          <input type="text" class="form-control" id="aniohasta" name="aniohasta" [(ngModel)]="expe.aniohasta" required>
+        </div>
+        <button class="btn btn-primary">
+          Modificar experiencia
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

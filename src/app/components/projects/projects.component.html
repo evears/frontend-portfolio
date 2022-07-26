@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="tarjeta">
+    <h1 class="titulo-card">Proyectos</h1>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-primary btn-sm" type="button" routerLink="/nuevoproye" *ngIf="isLogged">
+        <i class="fa fa-plus-square"></i> Crear nuevo</button>
+    </div>
+    <br>
+
+    <div class="row" *ngFor="let Proyecto of proye">
+
+      <div class="col-md-12">
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-success btn-sm" type="button" routerLink="/editproye/{{Proyecto.idproye}}"
+            *ngIf="isLogged"><i class="fa fa-pencil"></i>
+            Editar</button>
+          <button class="btn btn-danger btn-sm" type="button" (click)="delete(Proyecto.idproye)" *ngIf="isLogged"><i
+              class="fa fa-trash"></i>
+            Borrar</button>
+        </div>
+
+        <h4>{{Proyecto.nombre}}</h4>
+        <h6>{{Proyecto.anio}}</h6>
+        <p>{{Proyecto.descripcion}}</p>
+        <h5><a href="{{Proyecto.url}}" target="_blank">Link evidencia.</a></h5>
+      </div>
+
+    </div>
+  </div>
+</div>

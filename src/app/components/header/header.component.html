@@ -1,0 +1,35 @@
+<header class="navegator">
+  <div class="container-fluid">
+
+    <div class="row align-items-center">
+      <div class="col order-first">
+        <img src="assets/logo-arg-prog.png" width="140px">
+        <span class="titulo">Argentina Programa #YoProgramo</span>
+      </div>
+
+      <div class="col order-last">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="enlace" href="https://github.com/evears" target="_blank"><i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="enlace" href="https://www.linkedin.com/in/evearias/" target="_blank"><i
+                class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <button class="nav-item btn" type="button" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button class="nav-item btn" type="button" (click)="onLogOut()" *ngIf="isLogged">Salir</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="container-fluid text-center">
+  <img src="https://i0.wp.com/hadaftech.net/wp-content/uploads/2019/12/tracking_banner_img.png?fit=830,568&ssl=1"
+    class="img-fluid" width="600px" alt="banner">
+</div>

@@ -1,0 +1,19 @@
+.login-title {
+  font-size: 1.5rem;
+}
+
+.card-bg {
+  background-color: #b1a3af;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body,
+html {
+  min-width: 100vh;
+  max-width: 100vh;
+}

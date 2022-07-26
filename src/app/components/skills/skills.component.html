@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="tarjeta">
+    <h1 class="titulo-card">Habilidades e idiomas</h1>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-primary btn-sm" type="button" routerLink="/nuevahab" *ngIf="isLogged">
+        <i class="fa fa-plus-square"></i> Crear nuevo</button>
+    </div>
+
+
+    <div class="d-inline text-center" *ngFor="let Habilidad of hab">
+
+      <circle-progress [percent]="Habilidad.porcentaje" [radius]="100" [outerStrokeWidth]="15" [innerStrokeWidth]="8"
+        [animation]="true" [animationDuration]="300" [subtitle]="Habilidad.nombre"></circle-progress>
+
+      <button class="btn btn-success btn-sm" type="button" routerLink="/edithab/{{Habilidad.idhab}}" *ngIf="isLogged"><i
+          class="fa fa-pencil"></i></button>
+      <button class="btn btn-danger btn-sm" type="button" (click)="delete(Habilidad.idhab)" *ngIf="isLogged"><i
+          class="fa fa-trash"></i></button>
+
+    </div>
+
+  </div>
+</div>

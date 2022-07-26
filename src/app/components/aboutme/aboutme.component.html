@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="tarjeta">
+    <div class="row">
+      <div class="col-md-2 imagenes">
+        <img class="fotoperfil rounded-circle img-fluid" src="{{persona.urlfotoperfil}}" width="100px">
+      </div>
+      <div class="col-md-10">
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-success btn-sm" type="button" routerLink="/editperso/1" *ngIf="isLogged"><i
+              class="fa fa-pencil"></i>
+            Editar</button>
+        </div>
+
+        <h1 class="titulo-card">{{persona.nombre}} {{persona.apellido}}</h1>
+        <h5>{{persona.titulo}}</h5>
+        <h6>{{persona.infopersonal}}</h6>
+      </div>
+    </div>
+  </div>
+</div>
