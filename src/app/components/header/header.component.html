@@ -20,7 +20,8 @@
           </li>
           <li>
             <button class="nav-item btn" type="button" (click)="login()" *ngIf="!isLogged">Ingresar</button>
-            <button class="nav-item btn" type="button" (click)="onLogOut()" *ngIf="isLogged">Salir</button>
+            <button class="nav-item btn" type="button" (click)="onLogOut()" *ngIf="isLogged"
+              [ngStyle]="{'background-color':'#32495f'}">Salir</button>
           </li>
         </ul>
       </div>

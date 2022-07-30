@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/model/persona';
 import { PersonaService } from 'src/app/services/persona.service';
@@ -12,7 +13,8 @@ export class AboutmeComponent implements OnInit {
 
   persona: Persona = new Persona("", "", "", "", "");
 
-  constructor(private persoservice: PersonaService, private tokenService: TokenService) { }
+  constructor(private persoservice: PersonaService, private tokenService: TokenService,
+    private activatedRouter: ActivatedRoute) { }
 
   isLogged = false;
 
@@ -25,8 +27,9 @@ export class AboutmeComponent implements OnInit {
     }
   }
 
-  cargarPersona(id?: number): void {
-    this.persoservice.getById(id).subscribe(data => { this.persona = data; })
+  cargarPersona(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.persoservice.detail(id).subscribe(data => { this.persona = data; })
   }
 
 }

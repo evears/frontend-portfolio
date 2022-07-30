@@ -16,11 +16,7 @@ export class PersonaService {
     return this.httpClient.put<any>(this.persoURL + `editar/${id}`, persona);
   }
 
-  public getById(id: number): Observable<Persona> {
-    return this.httpClient.get<Persona>(this.persoURL + 'ver/1');
-  }
-
   public detail(id: number): Observable<Persona> {
-    return this.httpClient.get<Persona>(this.persoURL + `ver/${id}`);
+    return this.httpClient.get<Persona>(this.persoURL + `ver/1`);
   }
 }
