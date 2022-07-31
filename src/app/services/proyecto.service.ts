@@ -8,27 +8,27 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  proyeURL = 'http://localhost:8080/api/proyecto/';
+  proyeURL = 'https://afternoon-river-76491.herokuapp.com';
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Proyecto[]> {
-    return this.httpClient.get<Proyecto[]>(this.proyeURL + 'vertodos');
+    return this.httpClient.get<Proyecto[]>(this.proyeURL + '/api/proyecto/vertodos');
   }
 
   public detail(id: number): Observable<Proyecto> {
-    return this.httpClient.get<Proyecto>(this.proyeURL + `ver/${id}`);
+    return this.httpClient.get<Proyecto>(this.proyeURL + `/api/proyecto/ver/${id}`);
   }
 
   public save(proye: Proyecto): Observable<any> {
-    return this.httpClient.post<any>(this.proyeURL + 'crear', proye);
+    return this.httpClient.post<any>(this.proyeURL + '/api/proyecto/crear', proye);
   }
 
   public update(id: number, proye: Proyecto): Observable<any> {
-    return this.httpClient.put<any>(this.proyeURL + `editar/${id}`, proye);
+    return this.httpClient.put<any>(this.proyeURL + `/api/proyecto/editar/${id}`, proye);
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.proyeURL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.proyeURL + `/api/proyecto/delete/${id}`);
   }
 }

@@ -8,16 +8,16 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  private URL = "/api";
+  private URL = "https://afternoon-river-76491.herokuapp.com";
 
   constructor(private http: HttpClient, private cookies: CookieService) { }
 
   login(user: any): Observable<any> {
-    return this.http.post(this.URL + "/login", user);
+    return this.http.post(this.URL + "/api/login", user);
   }
 
   getUser(id: number): Observable<any> {
-    return this.http.get(this.URL + "usuario/ver/" + id);
+    return this.http.get(this.URL + "/api/usuario/ver/" + id);
   }
 
   setToken(token: string) {

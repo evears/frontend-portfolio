@@ -26,6 +26,7 @@ import { NewProjectComponent } from './components/projects/new-project.component
 import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NewPersonaComponent } from './components/aboutme/new-persona.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     EditProjectComponent,
     NewProjectComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    NewPersonaComponent
   ],
   imports: [
     BrowserModule,

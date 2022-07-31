@@ -32,4 +32,17 @@ export class AboutmeComponent implements OnInit {
     this.persoservice.detail(id).subscribe(data => { this.persona = data; })
   }
 
+
+  delete(id?: number) {
+    if (id != undefined) {
+      this.persoservice.delete(id).subscribe(
+        data => {
+          this.cargarPersona();
+        }, err => {
+          alert("No se pudo borrar la persona");
+        }
+      )
+    }
+  }
+
 }

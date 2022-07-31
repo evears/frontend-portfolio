@@ -1,6 +1,6 @@
 {
   "/api/*":{
-    "tarjet": "http://localhost:8080",
+    "tarjet": "https://afternoon-river-76491.herokuapp.com",
     "secure": false,
     "logLevel": "debug"
   }

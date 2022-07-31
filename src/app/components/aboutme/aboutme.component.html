@@ -1,15 +1,25 @@
 <div class="container-fluid">
   <div class="tarjeta">
     <div class="row">
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary btn-sm" type="button" routerLink="/nuevapersona" *ngIf="isLogged">
+          <i class="fa fa-plus-square"></i> Crear nueva</button>
+      </div>
+      <br>
+
       <div class="col-md-2 imagenes">
         <img class="fotoperfil rounded-circle img-fluid" src="{{persona.urlfotoperfil}}" width="100px">
       </div>
-      <div class="col-md-10">
 
+      <div class="col-md-10">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button class="btn btn-success btn-sm" type="button" routerLink="/editperso/1" *ngIf="isLogged"><i
               class="fa fa-pencil"></i>
             Editar</button>
+          <button class="btn btn-danger btn-sm" type="button" (click)="delete(persona.IDpersona)" *ngIf="isLogged"><i
+              class="fa fa-trash"></i>
+            Borrar</button>
         </div>
 
         <h1 class="titulo-card">{{persona.nombre}} {{persona.apellido}}</h1>

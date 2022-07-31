@@ -1,3 +1,4 @@
+import { NewPersonaComponent } from './components/aboutme/new-persona.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditAboutmeComponent } from './components/aboutme/edit-aboutme.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   //about me
   { path: 'editperso/:id', component: EditAboutmeComponent },
+  { path: 'nuevapersona', component: NewPersonaComponent },
   //experiencia
   { path: 'nuevaexp', component: NewExperienceComponent },
   { path: 'editexp/:id', component: EditExperienceComponent },

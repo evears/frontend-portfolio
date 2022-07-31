@@ -8,15 +8,23 @@ import { Persona } from '../model/persona';
 })
 export class PersonaService {
 
-  persoURL = 'http://localhost:8080/api/persona/';
+  persoURL = 'https://afternoon-river-76491.herokuapp.com';
 
   constructor(private httpClient: HttpClient) { }
 
   public update(id: number, persona: Persona): Observable<any> {
-    return this.httpClient.put<any>(this.persoURL + `editar/${id}`, persona);
+    return this.httpClient.put<any>(this.persoURL + `/api/persona/editar/${id}`, persona);
   }
 
   public detail(id: number): Observable<Persona> {
-    return this.httpClient.get<Persona>(this.persoURL + `ver/1`);
+    return this.httpClient.get<Persona>(this.persoURL + '/api/persona/ver/1');
+  }
+
+  public save(perso: Persona): Observable<any> {
+    return this.httpClient.post<any>(this.persoURL + '/api/persona/crear', perso);
+  }
+
+  public delete(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.persoURL + `/api/persona/delete/${id}`);
   }
 }
