@@ -21,7 +21,7 @@ export class HabilidadService {
   }
 
   public save(hab: Habilidad): Observable<any> {
-    return this.httpClient.post<any>(this.habURL + 'nueva', hab);
+    return this.httpClient.post<any>(this.habURL + 'crear', hab);
   }
 
   public update(id: number, hab: Habilidad): Observable<any> {
