@@ -22,8 +22,8 @@ export class NewEducationComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Educacion(this.instituto, this.titulo, this.urllogoedu, this.aniodesde, this.aniohasta);
-    this.eduservice.save(expe).subscribe(
+    const edu = new Educacion(this.instituto, this.titulo, this.urllogoedu, this.aniodesde, this.aniohasta);
+    this.eduservice.save(edu).subscribe(
       data => {
         alert("Educacion añadida");
         this.router.navigate(['']);
