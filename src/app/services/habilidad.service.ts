@@ -9,7 +9,7 @@ import { Habilidad } from '../model/habilidad';
 })
 export class HabilidadService {
 
-  habURL = environment.URL + 'api/habilidad/';
+  habURL = 'https://api-portfolio-argprog.herokuapp.com/api/habilidad/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -9,7 +9,7 @@ import { Persona } from '../model/persona';
 })
 export class PersonaService {
 
-  persoURL = environment.URL + 'api/persona/';
+  persoURL = 'https://api-portfolio-argprog.herokuapp.com/api/persona/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class PersonaService {
   }
 
   public detail(id: number): Observable<Persona> {
-    return this.httpClient.get<Persona>(this.persoURL + `ver/${id}`);
+    return this.httpClient.get<Persona>(this.persoURL + 'ver/1');
   }
 
   public save(perso: Persona): Observable<any> {

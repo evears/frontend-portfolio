@@ -19,8 +19,8 @@ export class NewSkillComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Habilidad(this.nombre, this.porcentaje);
-    this.habservice.save(expe).subscribe(
+    const hab = new Habilidad(this.nombre, this.porcentaje);
+    this.habservice.save(hab).subscribe(
       data => {
         alert("Habilidad añadida");
         this.router.navigate(['']);
