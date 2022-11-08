@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Proyecto } from '../model/proyecto';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  proyeURL = 'https://afternoon-river-76491.herokuapp.com/api/proyecto/';
+  proyeURL = environment.URL + 'api/proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 

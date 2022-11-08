@@ -1,6 +1,6 @@
 {
   "/api/*":{
-    "tarjet": "https://afternoon-river-76491.herokuapp.com/",
+    "tarjet": "https://api-portfolio-argprog.herokuapp.com/",
     "secure": false,
     "logLevel": "debug"
   }

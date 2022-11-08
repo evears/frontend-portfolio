@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Habilidad } from '../model/habilidad';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Habilidad } from '../model/habilidad';
 })
 export class HabilidadService {
 
-  habURL = 'https://afternoon-river-76491.herokuapp.com/api/habilidad/';
+  habURL = environment.URL + 'api/habilidad/';
 
   constructor(private httpClient: HttpClient) { }
 
