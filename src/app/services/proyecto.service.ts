@@ -9,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  proyeURL = 'https://api-portfolio-argprog.herokuapp.com/api/proyecto/';
+  proyeURL = 'https://afternoon-river-76491.herokuapp.com/api/proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 
